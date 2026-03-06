@@ -376,6 +376,21 @@
                                 <label class="mb-2">좌우 골반 기울기 차이 (Tilt °)</label>
                                 <div class="dir-radio-group">
                                     <label class="dir-radio-label">
+            <!-- 2. 구조적 평가: 신체 정렬 평가(경사계 측정) -->
+            <div class="card">
+                <div class="section-header">
+                    <div class="section-icon bg-purple-100 text-purple-600"><i class="fa-solid fa-person"></i></div>
+                    <h2 class="section-title">구조적 평가: 신체 정렬</h2>
+                </div>
+                <div class="space-y-6">
+                    <!-- 이마면 (Frontal Plane) -->
+                    <div>
+                        <h3 class="text-sm font-bold text-gray-700 border-b border-gray-100 pb-2 mb-3">이마면 (Frontal Plane)</h3>
+                        <div class="space-y-4">
+                            <div class="input-group">
+                                <label class="mb-2">좌우 골반 기울기 차이 (Tilt °)</label>
+                                <div class="dir-radio-group">
+                                    <label class="dir-radio-label">
                                         <input type="radio" name="pelvis-f-dir" value="left" class="dir-radio-input" checked>
                                         <span class="dir-radio-box">왼쪽 낮음 (-)</span>
                                     </label>
@@ -384,10 +399,7 @@
                                         <span class="dir-radio-box">오른쪽 낮음 (+)</span>
                                     </label>
                                 </div>
-                                <div class="grid grid-cols-2 gap-2">
-                                    <input type="text" inputmode="decimal" id="pelvis-f-1" class="input-field text-center" placeholder="1차">
-                                    <input type="text" inputmode="decimal" id="pelvis-f-2" class="input-field text-center" placeholder="2차">
-                                </div>
+                                <input type="text" inputmode="decimal" id="pelvis-f" class="input-field text-center" placeholder="수치 입력 (절댓값)">
                             </div>
                             <div class="input-group">
                                 <label class="mb-2">좌우 어깨뼈봉우리(Acromion) 기울기 차이 (Tilt °)</label>
@@ -401,10 +413,7 @@
                                         <span class="dir-radio-box">오른쪽 낮음 (+)</span>
                                     </label>
                                 </div>
-                                <div class="grid grid-cols-2 gap-2">
-                                    <input type="text" inputmode="decimal" id="shoulder-f-1" class="input-field text-center" placeholder="1차">
-                                    <input type="text" inputmode="decimal" id="shoulder-f-2" class="input-field text-center" placeholder="2차">
-                                </div>
+                                <input type="text" inputmode="decimal" id="shoulder-f" class="input-field text-center" placeholder="수치 입력 (절댓값)">
                             </div>
                         </div>
                     </div>
@@ -425,10 +434,7 @@
                                         <span class="dir-radio-box">후방경사 (Post)</span>
                                     </label>
                                 </div>
-                                <div class="grid grid-cols-2 gap-2">
-                                    <input type="text" inputmode="decimal" id="pelvis-s-1" class="input-field text-center" placeholder="1차 (절댓값)">
-                                    <input type="text" inputmode="decimal" id="pelvis-s-2" class="input-field text-center" placeholder="2차 (절댓값)">
-                                </div>
+                                <input type="text" inputmode="decimal" id="pelvis-s" class="input-field text-center" placeholder="수치 입력 (절댓값)">
                             </div>
                             <div class="input-group">
                                 <label class="mb-2">앞뒤 복장뼈패임-C7 기울기 (Jugular notch-C7 °)</label>
@@ -443,18 +449,12 @@
                                         <span class="dir-radio-box">후방 기울임 (신전)</span>
                                     </label>
                                 </div>
-                                <div class="grid grid-cols-2 gap-2">
-                                    <input type="text" inputmode="decimal" id="sternum-s-1" class="input-field text-center" placeholder="1차 (절댓값)">
-                                    <input type="text" inputmode="decimal" id="sternum-s-2" class="input-field text-center" placeholder="2차 (절댓값)">
-                                </div>
+                                <input type="text" inputmode="decimal" id="sternum-s" class="input-field text-center" placeholder="수치 입력 (절댓값)">
                             </div>
                             <div class="input-group">
                                 <label class="text-red-600">머리척추각 (CVA °)</label>
                                 <p class="text-xs text-gray-400 mb-2">거북목 평가 (정상: 50° 이상)</p>
-                                <div class="grid grid-cols-2 gap-2">
-                                    <input type="text" inputmode="decimal" id="cva-1" class="input-field text-center" placeholder="1차">
-                                    <input type="text" inputmode="decimal" id="cva-2" class="input-field text-center" placeholder="2차">
-                                </div>
+                                <input type="text" inputmode="decimal" id="cva" class="input-field text-center" placeholder="수치 입력">
                             </div>
                         </div>
                     </div>
@@ -554,7 +554,7 @@
                         <h3 class="text-sm font-bold text-gray-700 border-b border-gray-100 pb-2 mb-3">체간 유연성 (Sit-and-Reach)</h3>
                         <div class="input-group">
                             <label class="mb-2">앉아 윗몸 앞으로 굽히기 (cm)</label>
-                            <p class="text-xs text-gray-400 mb-2">발끝을 0cm 기준으로 측정 (절댓값 입력)</p>
+                            <p class="text-xs text-gray-400 mb-2">발끝을 0cm 기준으로 측정</p>
                             <div class="dir-radio-group">
                                 <label class="dir-radio-label">
                                     <input type="radio" name="sit-reach-dir" value="minus" class="dir-radio-input" checked>
@@ -565,10 +565,7 @@
                                     <span class="dir-radio-box">발끝 넘어섬 (+)</span>
                                 </label>
                             </div>
-                            <div class="grid grid-cols-2 gap-2">
-                                <input type="text" inputmode="decimal" id="sit-reach-1" class="input-field text-center" placeholder="1차 (절댓값)">
-                                <input type="text" inputmode="decimal" id="sit-reach-2" class="input-field text-center" placeholder="2차 (절댓값)">
-                            </div>
+                            <input type="text" inputmode="decimal" id="sit-reach" class="input-field text-center" placeholder="최종 측정값 입력 (절댓값)">
                         </div>
                     </div>
                 </div>
@@ -974,15 +971,10 @@
         });
 
         function runAnalysis() {
-            const getEffectiveValue = (id1, id2) => {
-                const v1 = document.getElementById(id1).value;
-                const v2 = document.getElementById(id2).value;
-                const n1 = parseFloat(v1);
-                const n2 = parseFloat(v2);
-                if(!isNaN(n1) && !isNaN(n2)) return (n1 + n2) / 2;
-                if(!isNaN(n1)) return n1;
-                if(!isNaN(n2)) return n2;
-                return null; 
+            // 단일 입력값 가져오기 헬퍼 함수 (값이 없으면 null 반환)
+            const getSingleVal = (id) => {
+                const val = document.getElementById(id).value.trim();
+                return val === '' ? null : parseFloat(val);
             };
 
             const getVal = (id) => parseFloat(document.getElementById(id).value) || 0;
@@ -1014,7 +1006,7 @@
             const frt = frtVal !== null ? frtVal : null;
             
             const sitReachDir = document.querySelector(`input[name="sit-reach-dir"]:checked`)?.value;
-            const sitReachVal = getMax('sit-reach-1', 'sit-reach-2');
+            const sitReachVal = getSingleVal('sit-reach');
             const sitReach = sitReachVal !== null ? (sitReachDir === 'minus' ? -Math.abs(sitReachVal) : Math.abs(sitReachVal)) : null;
 
             const getDirFactor = (name) => {
@@ -1023,12 +1015,12 @@
                 return (el.value === 'left' || el.value === 'post') ? -1 : 1;
             };
             
-            // Posture
-            const pelvisFVal = getEffectiveValue('pelvis-f-1', 'pelvis-f-2');
-            const shoulderFVal = getEffectiveValue('shoulder-f-1', 'shoulder-f-2');
-            const pelvisSVal = getEffectiveValue('pelvis-s-1', 'pelvis-s-2');
-            const sternumSVal = getEffectiveValue('sternum-s-1', 'sternum-s-2');
-            const cva = getEffectiveValue('cva-1', 'cva-2');
+            // Posture (단일 입력값으로 수정)
+            const pelvisFVal = getSingleVal('pelvis-f');
+            const shoulderFVal = getSingleVal('shoulder-f');
+            const pelvisSVal = getSingleVal('pelvis-s');
+            const sternumSVal = getSingleVal('sternum-s');
+            const cva = getSingleVal('cva');
             
             const pelvisF = pelvisFVal !== null ? Math.abs(pelvisFVal) * getDirFactor('pelvis-f-dir') : null;
             const shoulderF = shoulderFVal !== null ? Math.abs(shoulderFVal) * getDirFactor('shoulder-f-dir') : null;
