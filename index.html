@@ -376,21 +376,6 @@
                                 <label class="mb-2">좌우 골반 기울기 차이 (Tilt °)</label>
                                 <div class="dir-radio-group">
                                     <label class="dir-radio-label">
-            <!-- 2. 구조적 평가: 신체 정렬 평가(경사계 측정) -->
-            <div class="card">
-                <div class="section-header">
-                    <div class="section-icon bg-purple-100 text-purple-600"><i class="fa-solid fa-person"></i></div>
-                    <h2 class="section-title">구조적 평가: 신체 정렬</h2>
-                </div>
-                <div class="space-y-6">
-                    <!-- 이마면 (Frontal Plane) -->
-                    <div>
-                        <h3 class="text-sm font-bold text-gray-700 border-b border-gray-100 pb-2 mb-3">이마면 (Frontal Plane)</h3>
-                        <div class="space-y-4">
-                            <div class="input-group">
-                                <label class="mb-2">좌우 골반 기울기 차이 (Tilt °)</label>
-                                <div class="dir-radio-group">
-                                    <label class="dir-radio-label">
                                         <input type="radio" name="pelvis-f-dir" value="left" class="dir-radio-input" checked>
                                         <span class="dir-radio-box">왼쪽 낮음 (-)</span>
                                     </label>
@@ -461,7 +446,7 @@
                 </div>
             </div>
 
-            <!-- 3. 기능적 평가 1: Y-Balance (오른쪽) -->
+            <!-- 4. 기능적 평가 1: Y-Balance (오른쪽) -->
             <div class="card">
                 <div class="section-header">
                     <div class="section-icon bg-green-100 text-green-600"><i class="fa-solid fa-shoe-prints"></i></div>
@@ -495,7 +480,7 @@
                 </div>
             </div>
 
-            <!-- 4. 기능적 평가 2: Y-Balance (왼쪽) -->
+            <!-- 5. 기능적 평가 2: Y-Balance (왼쪽) -->
             <div class="card">
                 <div class="section-header">
                     <div class="section-icon bg-green-100 text-green-600"><i class="fa-solid fa-shoe-prints" style="transform: scaleX(-1);"></i></div>
@@ -529,7 +514,7 @@
                 </div>
             </div>
 
-            <!-- 5. 기능적 평가 3: 기능적 검사 (FRT & 유연성) -->
+            <!-- 6. 기능적 평가 3: 기능적 검사 (FRT & 유연성) -->
             <div class="card">
                 <div class="section-header">
                     <div class="section-icon bg-orange-100 text-orange-600"><i class="fa-solid fa-person-running"></i></div>
@@ -571,7 +556,7 @@
                 </div>
             </div>
 
-            <!-- 6. 심리 상태 (전체 너비) -->
+            <!-- 7. 심리 상태 (전체 너비) -->
             <div class="card md:col-span-2 lg:col-span-3">
                 <div class="section-header">
                     <div class="section-icon bg-cyan-100 text-cyan-600"><i class="fa-solid fa-brain"></i></div>
@@ -604,7 +589,7 @@
 
         <!-- 분석 버튼 -->
         <div class="text-center mt-10 sticky bottom-6 z-40" data-html2canvas-ignore="true">
-            <button id="analyze-btn" class="bg-blue-600 text-white font-bold py-4 px-12 rounded-full text-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center mx-auto w-full md:w-auto">
+            <button type="button" id="analyze-btn" class="bg-blue-600 text-white font-bold py-4 px-12 rounded-full text-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center mx-auto w-full md:w-auto">
                 <i class="fa-solid fa-wand-magic-sparkles mr-2"></i> 통합 분석 및 솔루션 생성
             </button>
         </div>
@@ -831,7 +816,7 @@
             { title: '6. 서 있기', options: ['통증 없이 얼마든지 서 있을 수 있다.', '오래 서 있을 수 있으나 통증이 따른다.', '통증 때문에 1시간 이상 서 있을 수 없다.', '통증 때문에 30분 이상 서 있을 수 없다.', '통증 때문에 10분 이상 서 있을 수 없다.', '통증 때문에 전혀 서 있을 수 없다.'] },
             { title: '7. 수면', options: ['통증 때문에 수면을 방해받지 않는다.', '통증 때문에 약간 수면을 방해받는다.', '통증 때문에 수면을 2시간 이하로 방해받는다.', '통증 때문에 수면을 4시간 이하로 방해받는다.', '통증 때문에 수면을 6시간 이하로 방해받는다.', '통증 때문에 전혀 잠을 잘 수 없다.'] },
             { title: '8. 사회 생활', options: ['통증 없이 정상적인 사회생활이 가능하다.', '정상적으로 가능하나 통증이 다소 증가한다.', '통증 때문에 활동적인 사회생활(스포츠 등)이 제한된다.', '통증 때문에 외출이 자주 제한된다.', '통증 때문에 집 안에서만 사회생활이 가능하다.', '통증 때문에 사회생활을 전혀 할 수 없다.'] },
-            { title: '9. 여행 및 이동', options: ['어디든 통증 없이 갈 수 있다.', '어디든 갈 수 있으나 통증이 따른다.', '통증 때문에 2시간 이상 걸리는 곳은 갈 수 없다.', '통증 때문에 1시간 이상 걸리는 곳은 갈 수 없다.', '치료를 위해 병원에 가는 것 외에는 짧은 여행도 불가하다.', '통증 때문에 침대 외에는 전혀 이동할 수 없다.'] },
+            { title: '9. 여행 및 이동', options: ['어디든 통증 없이 갈 수 있다.', '어디든 갈 수 있으나 통증이 따른다.', '통증 때문에 2시간 이상 걸리는 곳은 갈 수 없다.', '통증 때문에 1시간 이상 걸리는 곳은 갈 수 없다.', '치료를 위해 병원에 가는 기는 것 외에는 짧은 여행도 불가하다.', '통증 때문에 침대 외에는 전혀 이동할 수 없다.'] },
             { title: '10. 통증의 변화', options: ['통증이 빠르게 호전되고 있다.', '통증이 서서히 호전되고 있다.', '호전되지는 않으나 더 나빠지지도 않는다.', '통증이 서서히 나빠지고 있다.', '통증이 빠르게 나빠지고 있다.', '통증이 계속 악화되어 견딜 수 없다.'] }
         ];
 
@@ -917,18 +902,24 @@
             document.getElementById('progress-bar').style.width = `${pct}%`;
         }
 
-        document.getElementById('analyze-btn').addEventListener('click', () => {
+        document.getElementById('analyze-btn').addEventListener('click', (e) => {
+            e.preventDefault(); // 기본 폼 제출 방지
+
             const heightInput = document.getElementById('height');
             const weightInput = document.getElementById('weight');
             const ageInput = document.getElementById('age');
             const genderInput = document.querySelector('input[name="gender"]:checked');
 
             let isValid = true;
+            let firstErrorEl = null;
+
             const check = (el, errId) => {
                 if(!el.value) {
                     el.classList.add('error');
-                    document.getElementById(errId).style.display = 'block';
+                    const errEl = document.getElementById(errId);
+                    errEl.style.display = 'block';
                     isValid = false;
+                    if (!firstErrorEl) firstErrorEl = el;
                 } else {
                     el.classList.remove('error');
                     document.getElementById(errId).style.display = 'none';
@@ -940,47 +931,72 @@
             check(ageInput, 'age-error');
             
             if(!genderInput) {
-                document.getElementById('gender-error').style.display = 'block';
+                const errEl = document.getElementById('gender-error');
+                errEl.style.display = 'block';
                 isValid = false;
+                if (!firstErrorEl) firstErrorEl = errEl;
             } else {
                 document.getElementById('gender-error').style.display = 'none';
             }
             
-            if(!isValid) return;
+            // 필수 항목이 비어있으면 경고창 띄우고 해당 위치로 스크롤
+            if(!isValid) {
+                alert("필수 입력 항목(키, 몸무게, 만 나이, 성별)이 누락되었습니다. 상단으로 이동하여 입력해 주세요.");
+                if(firstErrorEl) {
+                    firstErrorEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+                return;
+            }
 
             if(heightInput.value && (parseFloat(heightInput.value) < 50 || parseFloat(heightInput.value) > 250)) {
-                 alert("키 입력값이 비정상적입니다."); isValid = false;
+                 alert("키 입력값이 비정상적입니다. 다시 확인해주세요."); 
+                 heightInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                 return;
             }
-            if(!isValid) return;
 
             const loader = document.getElementById('loading-overlay');
             loader.classList.remove('hidden');
             loader.classList.add('flex');
 
             setTimeout(() => {
-                runAnalysis();
-                loader.classList.add('hidden');
-                loader.classList.remove('flex');
-                
-                const resultSec = document.getElementById('results-section');
-                resultSec.classList.remove('hidden');
-                const y = resultSec.getBoundingClientRect().top + window.pageYOffset - 40;
-                window.scrollTo({top: y, behavior: 'smooth'});
-                
+                try {
+                    runAnalysis();
+                    loader.classList.add('hidden');
+                    loader.classList.remove('flex');
+                    
+                    const resultSec = document.getElementById('results-section');
+                    resultSec.classList.remove('hidden');
+                    const y = resultSec.getBoundingClientRect().top + window.pageYOffset - 40;
+                    window.scrollTo({top: y, behavior: 'smooth'});
+                } catch (error) {
+                    console.error(error);
+                    alert("분석 처리 중 일시적인 오류가 발생했습니다. 입력값을 다시 확인해주세요.");
+                    loader.classList.add('hidden');
+                    loader.classList.remove('flex');
+                }
             }, 1200);
         });
 
         function runAnalysis() {
-            // 단일 입력값 가져오기 헬퍼 함수 (값이 없으면 null 반환)
+            // 단일 입력값 가져오기 헬퍼 함수 (안전성 강화)
             const getSingleVal = (id) => {
-                const val = document.getElementById(id).value.trim();
+                const el = document.getElementById(id);
+                if(!el) return null;
+                const val = el.value.trim();
                 return val === '' ? null : parseFloat(val);
             };
 
-            const getVal = (id) => parseFloat(document.getElementById(id).value) || 0;
+            const getVal = (id) => {
+                const el = document.getElementById(id);
+                return el ? (parseFloat(el.value) || 0) : 0;
+            };
+
             const getMax = (id1, id2) => {
-                 const v1 = document.getElementById(id1).value;
-                 const v2 = document.getElementById(id2).value;
+                 const el1 = document.getElementById(id1);
+                 const el2 = document.getElementById(id2);
+                 if(!el1 || !el2) return null;
+                 const v1 = el1.value;
+                 const v2 = el2.value;
                  if(!v1 && !v2) return null;
                  return Math.max(parseFloat(v1)||0, parseFloat(v2)||0);
             };
@@ -1015,7 +1031,7 @@
                 return (el.value === 'left' || el.value === 'post') ? -1 : 1;
             };
             
-            // Posture (단일 입력값으로 수정)
+            // Posture
             const pelvisFVal = getSingleVal('pelvis-f');
             const shoulderFVal = getSingleVal('shoulder-f');
             const pelvisSVal = getSingleVal('pelvis-s');
